@@ -1,0 +1,92 @@
+.wheel {
+  width: 400px;
+  height: 400px;
+  border: 15px solid #d42e40;
+  border-radius: 50%;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: rotateWheel 12s infinite alternate;
+}
+
+@keyframes rotateWheel {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+.section {
+  position: absolute;
+  width: 330px;
+  text-align: left;
+  color: #b4b4b5;
+  font-weight: bold;
+  font-size: 16px;
+  transform-origin: 50% 100%;
+  border-bottom: 0px;
+}
+
+.section::before {
+  /* Create connecting lines */
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #d42e40;
+  top: 0;
+  left: 50%;
+  width: 5px;
+  height: 300px; /* Adjust as needed */
+  background-color: #d42e40;
+  transform-origin: 50% 100% rotate(45deg);
+}
+
+.section:nth-child(1) {
+  transform: rotate(0deg);
+}
+.section:nth-child(2) {
+  transform: rotate(45deg);
+}
+.section:nth-child(3) {
+  transform: rotate(90deg);
+}
+.section:nth-child(4) {
+  transform: rotate(135deg);
+}
+.section:nth-child(5) {
+  transform: rotate(180deg);
+}
+.section:nth-child(6) {
+  transform: rotate(225deg);
+}
+.section:nth-child(7) {
+  transform: rotate(270deg);
+}
+.section:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+.spin-button {
+  padding: 20px; /* Adjust padding as needed */
+  background-color: white;
+  color: #d42e40;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.wheel-button {
+  position: absolute;
+  border: 18px solid #d42e40;
+  border-radius: 100px;
+  top: 50%; /* Center the wheel button vertically */
+  left: 50%; /* Center the wheel button horizontally */
+  transform: translate(-50%, -50%); /* Center the button */
+}
