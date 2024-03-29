@@ -41,7 +41,7 @@
   top: 0;
   left: 50%;
   width: 5px;
-  height: 300px; /* Adjust as needed */
+  height: 300px;
   background-color: #d42e40;
   transform-origin: 50% 100% rotate(45deg);
 }
@@ -72,7 +72,7 @@
 }
 
 .spin-button {
-  padding: 20px; /* Adjust padding as needed */
+  padding: 20px;
   background-color: white;
   color: #d42e40;
   font-weight: bold;
@@ -86,7 +86,7 @@
   position: absolute;
   border: 18px solid #d42e40;
   border-radius: 100px;
-  top: 50%; /* Center the wheel button vertically */
-  left: 50%; /* Center the wheel button horizontally */
-  transform: translate(-50%, -50%); /* Center the button */
+  top: 50%
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
